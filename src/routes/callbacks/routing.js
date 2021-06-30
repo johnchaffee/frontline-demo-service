@@ -18,10 +18,11 @@ const routeConversation = async (conversationSid, customerNumber) => {
     if (!workerIdentity) { // Customer doesn't have a worker
 
         // Select a random worker
-        workerIdentity = await findRandomWorker();
+        // workerIdentity = await findRandomWorker();
 
         // Or you can define default worker for unknown customers.
-        // workerIdentity = 'john@example.com'
+        // If there is no default mapping for inbound sms, assign to this person:
+        workerIdentity = 'fred.chaffee@me.com';
 
         if (!workerIdentity) {
             console.warn("Routing failed, please add workers to customersToWorkersMap or define a default worker", { conversationSid: conversationSid });
