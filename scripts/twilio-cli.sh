@@ -1,13 +1,7 @@
 #!/bin/sh
 
-TWILIO_ACCOUNT_SID=ACe674d877011b71537aec97f4e3745338
-TWILIO_AUTH_TOKEN=2da92fd57507cfed31f9abd6f12f2497
-TWILIO_SSO_REALM_SID=JB240380ee321921565156d5a7fa485585
-TWILIO_SMS_NUMBER=+12068231284
-
-
-# # frontline:John <-> sms:John Mobile
-# CHAT_USER_IDENTITY=mary.chaffee@me.com
+# # frontline:Fred <-> sms:John Mobile
+# CHAT_USER_IDENTITY=fred.chaffee@me.com
 # MOBILE_USER="John Chaffee Mobile"
 # MOBILE_NUMBER=+12063996576
 
