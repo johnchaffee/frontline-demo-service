@@ -1,4 +1,8 @@
+#!/bin/sh
 
+# Load environment variables from .env
+# https://stackoverflow.com/a/30969768/179329
+set -o allexport; source ../.env; set +o allexport
 
 # Add custom attribute to John Mobile
 twilio api:conversations:v1:conversations:participants:update \

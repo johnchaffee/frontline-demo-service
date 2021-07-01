@@ -1,30 +1,8 @@
 #!/bin/sh
 
-MOBILE_NAME="John Chaffee"
-MOBILE_NUMBER=+12063996576
-FINGERPRINT=1514465037
-
-# MOBILE_NAME="Lani Mobile"
-# MOBILE_NUMBER=+12063693826
-# FINGERPRINT=4229642799
-
-# MOBILE_NAME="Alan Mobile"
-# MOBILE_NUMBER=+14259222865
-# FINGERPRINT=2147939485
-
-# MOBILE_NAME="Ravi Angadi"
-# MOBILE_NUMBER=+15712135596
-# FINGERPRINT=2376915500
-
-# MOBILE_NAME="John Lauer"
-# MOBILE_NUMBER=+12065823770
-# FINGERPRINT=52179751
-
-ZIPWHIP_USER="Web Agent"
-TWILIO_LANDLINE=+12068231284
-
-# ZIPWHIP
-ZIPWHIP_SESSION=f86b1a4c-b874-4e10-ada9-3d79d6b83ffc:377265507
+# Load environment variables from .env
+# https://stackoverflow.com/a/30969768/179329
+set -o allexport; source ../.env; set +o allexport
 
 # Create Conversation with Mobile Name
 CONVERSATION=`twilio api:conversations:v1:conversations:create --friendly-name "$MOBILE_NAME" | grep "CH"`

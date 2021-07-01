@@ -1,20 +1,14 @@
 #!/bin/sh
 
-# # frontline:Fred <-> sms:John Mobile
-# CHAT_USER_IDENTITY=fred.chaffee@me.com
-# MOBILE_USER="John Chaffee Mobile"
-# MOBILE_NUMBER=+12063996576
-
-# frontline:Fred <-> sms:Lani Mobile
-CHAT_USER_IDENTITY=fred.chaffee@me.com
-MOBILE_USER="Lani Chaffee"
-MOBILE_NUMBER=+12063693826
+# Load environment variables from .env
+# https://stackoverflow.com/a/30969768/179329
+set -o allexport; source ../.env; set +o allexport
 
 # Create a new conversation
 # twilio api:conversations:v1:conversations:create \
 #   --friendly-name "My First Conversation"
 
-CONVERSATION_SID=`twilio api:conversations:v1:conversations:create --friendly-name "$MOBILE_USER" | grep "CH" | cut -c1-34`
+CONVERSATION_SID=`twilio api:conversations:v1:conversations:create --friendly-name "$MOBILE_NAME" | grep "CH" | cut -c1-34`
 echo CONVERSATION_SID $CONVERSATION_SID
 
 # Fetch the new conversation

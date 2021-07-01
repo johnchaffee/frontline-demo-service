@@ -1,9 +1,8 @@
 #!/bin/sh
 
-# TWILIO_LANDLINE=+12068231284
-
-# MOBILE_NAME="John Mobile"
-# MOBILE_NUMBER=+12063996576
+# Load environment variables from .env
+# https://stackoverflow.com/a/30969768/179329
+set -o allexport; source ../.env; set +o allexport
 
 # Get last conversation
 CONVERSATION=`twilio api:conversations:v1:conversations:list -o json | jq 'sort_by(.dateCreated) | last'`

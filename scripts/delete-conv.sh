@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Load environment variables from .env
+# https://stackoverflow.com/a/30969768/179329
+set -o allexport; source ../.env; set +o allexport
+
 # Get all the conversation SIDs, they will be surrounded by quotes
 CONVERSATIONS=`twilio api:conversations:v1:conversations:list -o json | jq '.[].sid'`
 
