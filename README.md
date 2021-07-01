@@ -74,5 +74,23 @@ const customers = [
 ];
 ```
 
+## Webhooks
+
+Webhooks are configured all over the place. Depending on whether you are running locally or on heroku you'll need to update the endpoints in all of these places in the Twilio Console:
+
+* Messaging > Messaging Services > Default Conversations Services > Integration
+  * Autocreate a Conversation
+* Frontline > Configure
+  * CRM Callback URL
+  * Outgoing Conversations Callback URL
+  * Templates Callback URL
+* Frontline > Routing
+  * Custom routing
+* Conversations > Configure
+  * Webhook URLs
+    * Pre-Event URL
+    * Post-Event URL
+
+
 ---
 Detailed information can be found in **Quickstart**, provided by Frontline team.
