@@ -28,7 +28,7 @@ twilio api:conversations:v1:conversations:participants:create --conversation-sid
 # twilio api:conversations:v1:conversations:participants:create --conversation-sid "$CONVERSATION_SID" --identity "fred.chaffee@me.com"
 
 # # Create long-lived (24 hours in seconds) token for zipwhip user 
-# TOKEN=`twilio token:chat --chat-service-sid "$CHAT_SERVICE_ID" --identity "$ZIPWHIP_USER" --ttl 86400`
+# TOKEN=`twilio token:chat --chat-service-sid "$CHAT_SERVICE_ID" --identity "$ZIPWHIP_USER" --ttl 86400 --profile jc`
 # echo TOKEN: $TOKEN
 
 # Import message history
