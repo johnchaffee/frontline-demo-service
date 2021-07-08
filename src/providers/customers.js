@@ -55,6 +55,14 @@ const customersToWorkersMap = {
   "+15102197286": "abillings@zipwhip.com",
   "+12069485760": "sroben@zipwhip.com",
   "+12066013540": "Dwestra@zipwhip.com",
+  "+12062951888": "bmoore@zipwhip.com",
+  "+12065823768": "bmoore@zipwhip.com",
+  "+14259225245": "icoletti@zipwhip.com",
+  "+12068163975": "icoletti@zipwhip.com",
+  "+12064149445": "rfernandes@zipwhip.com",
+  "+12063099536": "rfernandes@zipwhip.com",
+  "+18435138500": "dlavigne@zipwhip.com",
+  "+12068163523": "dlavigne@zipwhip.com",
 };
 
 // Customers list
@@ -125,6 +133,15 @@ const customers = [
     worker: "bbremer@zipwhip.com",
   },
   {
+    customer_id: "2001",
+    display_name: "Brendan Moore",
+    channels: [
+      { type: "sms", value: "+12065823768" },
+      { type: "sms", value: "+12062951888" },
+    ],
+    worker: "bmoore@zipwhip.com",
+  },
+  {
     customer_id: "1002",
     display_name: "Britt Buchan",
     channels: [
@@ -158,6 +175,15 @@ const customers = [
     worker: "rsuzuki@zipwhip.com",
   },
   {
+    customer_id: "2022",
+    display_name: "David Lavigne",
+    channels: [
+      { type: "sms", value: "+18435138500" },
+      { type: "sms", value: "+12068163523" },
+    ],
+    worker: "dlavigne@zipwhip.com",
+  },
+  {
     customer_id: "1003",
     display_name: "Eduardo Martinez",
     channels: [
@@ -171,6 +197,15 @@ const customers = [
     display_name: "Fadi Banna",
     channels: [{ type: "sms", value: "+12063099567" }],
     worker: "fbanna@zipwhip.com",
+  },
+  {
+    customer_id: "2005",
+    display_name: "Ian Coletti",
+    channels: [
+      { type: "sms", value: "+12068163975" },
+      { type: "sms", value: "+14259225245" },
+    ],
+    worker: "icoletti@zipwhip.com",
   },
   {
     customer_id: "1005",
@@ -302,6 +337,15 @@ const customers = [
       { type: "sms", value: "+12068001254" },
     ],
     worker: "rangadi@zipwhip.com",
+  },
+  {
+    customer_id: "2015",
+    display_name: "Reeve Fernandes",
+    channels: [
+      { type: "sms", value: "+12064149445" },
+      { type: "sms", value: "+12063099536" },
+    ],
+    worker: "rfernandes@zipwhip.com",
   },
   {
     customer_id: "1016",
