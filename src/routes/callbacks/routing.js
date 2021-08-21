@@ -39,7 +39,7 @@ const routeConversationToWorker = async (conversationSid, workerIdentity) => {
         .conversations(conversationSid)
         .participants
         .create({ identity: workerIdentity })
-        .then(participant => console.log('CREATE AGENT PARTICIPANT: ', participant.sid))
+        .then(participant => console.log('CREATE AGENT PARTICIPANT: ', participant.sid + " - " + participant.identity))
         .catch(e => console.log('Create agent participant: ', e));
 }
 

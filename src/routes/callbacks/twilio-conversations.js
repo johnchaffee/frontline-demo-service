@@ -2,6 +2,7 @@ const { getCustomerByNumber } = require('../../providers/customers');
 const twilioClient = require('../../providers/twilio');
 
 const conversationsCallbackHandler = async (req, res) => {
+    console.log("CONVERSATIONS");
     res.locals.log("Conversations Callback");
     res.locals.log(JSON.stringify(req.body));
 
