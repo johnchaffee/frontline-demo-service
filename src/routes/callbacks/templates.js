@@ -67,9 +67,12 @@ const handleGetTemplatesByCustomerIdCallback = async (req, res) => {
       { content: compileTemplate(CLOSING_ASK_REVIEW, customerDetails) },
     ],
   };
+  
+  const myCompiledTemplates = [johnCategory, openersCategory, repliesCategory, closingCategory];
+  console.log(JSON.stringify(myCompiledTemplates, undefined, 2));
 
   // Respond with compiled Templates
-  res.send([johnCategory, openersCategory, repliesCategory, closingCategory]);
+  res.send(myCompiledTemplates);
 };
 
 const compileTemplate = (template, customer) => {

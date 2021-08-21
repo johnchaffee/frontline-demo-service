@@ -37,6 +37,7 @@ const handleGetCustomerDetailsByCustomerIdCallback = async (req, res) => {
     // Fetch Customer Details based on his ID
     // and information about a worker, that requested that information
     const customerDetails = await getCustomerById(customerId);
+    console.log(JSON.stringify(customerDetails, undefined, 2));
 
     // Respond with Contact object
     res.send({
@@ -63,6 +64,7 @@ const handleGetCustomersListCallback = async (req, res) => {
 
     // Fetch Customers list based on information about a worker, that requested it
     const customersList = await getCustomersList(workerIdentity, pageSize, anchor);
+    console.log(JSON.stringify(customersList, undefined, 2));
 
     // Respond with Customers object
     res.send({
