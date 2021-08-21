@@ -8,7 +8,7 @@ const authMiddleware = async (req, res, next) => {
 
     // handle Twilio JWT token if present
     if (token) {
-        console.log('Process token info');
+        console.log('PROCESS TOKEN INFO');
         try {
             const tokenInfo = await validateToken(token);
             if (tokenInfo.identity) {

@@ -20,7 +20,7 @@ const templatesCallbackHandler = async (req, res) => {
 
 const handleGetTemplatesByCustomerIdCallback = async (req, res) => {
   const body = req.body;
-  console.log("Getting templates: ", body.CustomerId);
+  console.log("GETTING TEMPLATES: ", body.CustomerId);
 
   const workerIdentity = req.tokenInfo.identity;
   const customerId = body.CustomerId;

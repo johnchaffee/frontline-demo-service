@@ -29,7 +29,7 @@ const crmCallbackHandler = async (req, res) => {
 
 const handleGetCustomerDetailsByCustomerIdCallback = async (req, res) => {
     const body = req.body;
-    console.log('Getting Customer details: ', body.CustomerId);
+    console.log('GETTING CUSTOMER DETAILS: ', body.CustomerId);
 
     const workerIdentity = req.tokenInfo.identity;
     const customerId = body.CustomerId;
@@ -55,7 +55,7 @@ const handleGetCustomerDetailsByCustomerIdCallback = async (req, res) => {
 };
 
 const handleGetCustomersListCallback = async (req, res) => {
-    console.log('Getting Customers list');
+    console.log('GETTING CUSTOMERS LIST');
 
     const body = req.body;
     const workerIdentity = req.tokenInfo.identity;

@@ -20,7 +20,7 @@ const outgoingConversationCallbackHandler = (req, res) => {
 };
 
 const handleGetProxyAddress = (req, res) => {
-    console.log('Getting Proxy Address');
+    console.log('GETTING PROXY ADDRESS');
 
     const body = req.body;
     const workerIdentity = req.tokenInfo.identity;

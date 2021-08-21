@@ -2,6 +2,7 @@ const { findWorkerForCustomer, getCustomerByNumber, findRandomWorker } = require
 const twilioClient = require('../../providers/twilio');
 
 const routingCallbackHandler = async (req, res) => {
+    console.log("ROUTING");
     res.locals.log("Frontline Routing Callback");
     res.locals.log(JSON.stringify(req.body));
 
@@ -38,7 +39,7 @@ const routeConversationToWorker = async (conversationSid, workerIdentity) => {
         .conversations(conversationSid)
         .participants
         .create({ identity: workerIdentity })
-        .then(participant => console.log('Create agent participant: ', participant.sid))
+        .then(participant => console.log('CREATE AGENT PARTICIPANT: ', participant.sid))
         .catch(e => console.log('Create agent participant: ', e));
 }
 
