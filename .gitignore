@@ -109,3 +109,4 @@ dist
 
 # custom
 .okta
+.DS_Store

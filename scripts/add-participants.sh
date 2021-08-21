@@ -12,15 +12,15 @@ echo CONVERSATION $CONVERSATION
 CONVERSATION_SID=`echo "$CONVERSATION" | grep "sid" | cut -c11-44`
 echo CONVERSATION_SID $CONVERSATION_SID
 
-# CHAT_SERVICE_ID=`echo "$CONVERSATION" | cut -c37-70`
-CHAT_SERVICE_ID=`echo "$CONVERSATION" | grep "chatServiceSid" | cut -c22-55`
-echo CHAT_SERVICE_ID $CHAT_SERVICE_ID
+# CHAT_SERVICE_SID=`echo "$CONVERSATION" | cut -c37-70`
+CHAT_SERVICE_SID=`echo "$CONVERSATION" | grep "chatServiceSid" | cut -c22-55`
+echo CHAT_SERVICE_SID $CHAT_SERVICE_SID
 
 # # Create SMS participant (John mobile)
 # twilio api:conversations:v1:conversations:participants:create --conversation-sid="$CONVERSATION_SID" --messaging-binding.address "$MOBILE_NUMBER" --messaging-binding.proxy-address "$TWILIO_LANDLINE"
 
 # # Create long-lived (24 hours in seconds) token for web agent
-# TOKEN=`twilio token:chat --chat-service-sid "$CHAT_SERVICE_ID" --identity "Web Agent" --ttl 86400 --profile jc`
+# TOKEN=`twilio token:chat --chat-service-sid "$CHAT_SERVICE_SID" --identity "Web Agent" --ttl 86400 --profile jc`
 # echo TOKEN: $TOKEN
 
 # Add Web Agent participant

@@ -11,8 +11,8 @@ echo CONVERSATION $CONVERSATION
 CONVERSATION_SID=`echo "$CONVERSATION" | cut -c1-34`
 echo CONVERSATION_SID $CONVERSATION_SID
 
-CHAT_SERVICE_ID=`echo "$CONVERSATION" | cut -c37-70`
-echo CHAT_SERVICE_ID $CHAT_SERVICE_ID
+CHAT_SERVICE_SID=`echo "$CONVERSATION" | cut -c37-70`
+echo CHAT_SERVICE_SID $CHAT_SERVICE_SID
 
 # Create pseudo mobile user chat identity (for importing message history)
 PSEUDO_MOBILE_CHAT_ID=`twilio api:conversations:v1:conversations:participants:create --conversation-sid "$CONVERSATION_SID" --identity "$MOBILE_NAME" | grep "MB" | cut -c1-34`
@@ -28,7 +28,7 @@ twilio api:conversations:v1:conversations:participants:create --conversation-sid
 # twilio api:conversations:v1:conversations:participants:create --conversation-sid "$CONVERSATION_SID" --identity "fred.chaffee@me.com"
 
 # # Create long-lived (24 hours in seconds) token for zipwhip user 
-# TOKEN=`twilio token:chat --chat-service-sid "$CHAT_SERVICE_ID" --identity "$ZIPWHIP_USER" --ttl 86400 --profile jc`
+# TOKEN=`twilio token:chat --chat-service-sid "$CHAT_SERVICE_SID" --identity "$ZIPWHIP_USER" --ttl 86400 --profile jc`
 # echo TOKEN: $TOKEN
 
 # Import message history
