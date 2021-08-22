@@ -33,8 +33,8 @@ const handleGetTemplatesByCustomerIdCallback = async (req, res) => {
   }
 
   // Prepare templates categories
-  const johnCategory = {
-    display_name: "John's Templates", // Category name
+  const paymentsCategory = {
+    display_name: "Payments", // Category name
     templates: [
       { content: compileTemplate(PAYMENT_REQUEST, customerDetails) }, // Compiled template
       { content: compileTemplate(PAYMENT_RECEIVED, customerDetails) }, // Compiled template
@@ -68,7 +68,7 @@ const handleGetTemplatesByCustomerIdCallback = async (req, res) => {
     ],
   };
   
-  const myCompiledTemplates = [johnCategory, openersCategory, repliesCategory, closingCategory];
+  const myCompiledTemplates = [paymentsCategory, openersCategory, repliesCategory, closingCategory];
   console.log(JSON.stringify(myCompiledTemplates, undefined, 2));
 
   // Respond with compiled Templates
@@ -84,7 +84,7 @@ const compileTemplate = (template, customer) => {
 const PAYMENT_REQUEST =
   "Hi {{Name}}. This is a payment request for x.\n-{{Author}}";
 const PAYMENT_RECEIVED =
-  "Hi {{Name}}, we have processed your payment for 5 items at $7.95 each for a total of $" + 5 * 7.95 + ".\n-Regards, {{Author}}";
+  "Hi {{Name}}, we have processed your payment for 5 items @ $7.95 each for a total of $" + (5 * 7.95) + ".\n-Regards, {{Author}}";
 const OPENER_NEXT_STEPS =
   "Hello {{Name}} we have now processed your documents and would like to move you on to the next step. Drop me a message. {{Author}}.";
 const OPENER_NEW_PRODUCT =
