@@ -9,60 +9,83 @@
 // These are the default sms-to-worker mappings for new inbound conversations
 const customersToWorkersMap = {
   "+12062842471": "jlarson@zipwhip.com",
+  "+12062951888": "bmoore@zipwhip.com",
+  "+12062991304": "KMohamud@zipwhip.com",
   "+12062991349": "RMiller@zipwhip.com",
   "+12062991359": "MRosa@zipwhip.com",
+  "+12062991391": "MKaboud@zipwhip.com",
   "+12062991395": "agupta@zipwhip.com",
   "+12063002992": "jwong@zipwhip.com",
+  "+12063099510": "FAntara@zipwhip.com",
+  "+12063099533": "CLaitano@zipwhip.com",
+  "+12063099534": "SBajaj@zipwhip.com",
+  "+12063099535": "DJeannotte@zipwhip.com",
+  "+12063099536": "rfernandes@zipwhip.com",
   "+12063099553": "rgachet@zipwhip.com",
   "+12063099554": "acheslow@zipwhip.com",
   "+12063099565": "smehlhase@zipwhip.com",
   "+12063099567": "fbanna@zipwhip.com",
   "+12063099568": "amahajan@zipwhip.com",
   "+12063099569": "rsuzuki@zipwhip.com",
+  "+12063099572": "JMorts@zipwhip.com",
   "+12063219402": "tip@zipwhip.com",
   "+12063693826": "fred.chaffee@me.com",
+  "+12063838678": "mgomes@zipwhip",
   "+12063996576": "fred.chaffee@me.com",
+  "+12064149445": "rfernandes@zipwhip.com",
+  "+12064809705": "CLaitano@zipwhip.com",
   "+12064932020": "jkiga@zipwhip.com",
   "+12064932128": "jwong@zipwhip.com",
   "+12064996825": "jparrish@zipwhip.com",
   "+12065823733": "khoutchens@zipwhip.com",
   "+12065823748": "bbuchan@zipwhip.com",
+  "+12065823768": "bmoore@zipwhip.com",
   "+12065823770": "jlauer@zipwhip.com",
+  "+12066013540": "Dwestra@zipwhip.com",
+  "+12067650585": "DJeannotte@zipwhip.com",
   "+12068001242": "bbremer@zipwhip.com",
   "+12068001254": "rangadi@zipwhip.com",
   "+12068061354": "bbremer@zipwhip.com",
+  "+12068163523": "dlavigne@zipwhip.com",
+  "+12068163541": "jbaer@zipwhip.com",
   "+12068163571": "emartinez@zipwhip.com",
   "+12068163598": "fred.chaffee@me.com",
   "+12068163623": "tip@zipwhip.com",
   "+12068163671": "jparrish@zipwhip.com",
+  "+12068163962": "dli@zipwhip.com",
   "+12068163972": "srandolph@zipwhip.com",
+  "+12068163975": "icoletti@zipwhip.com",
   "+12068163991": "mamsberry@zipwhip.com",
   "+12068495332": "khoutchens@zipwhip.com",
+  "+12068597896": "acapps@zipwhip.com",
+  "+12068664904": "FAntara@zipwhip.com",
+  "+12069206418": "dli@zipwhip.com",
+  "+12069485760": "sroben@zipwhip.com",
   "+12392876019": "MRosa@zipwhip.com",
   "+12537404684": "jkiga@zipwhip.com",
+  "+12539511221": "CMcMillin@zipwhip.com",
+  "+12539511221": "jgrajewski@zipwhip.com",
   "+13125324371": "smehlhase@zipwhip.com",
   "+13134147502": "jlauer@zipwhip.com",
   "+14252699507": "mamsberry@zipwhip.com",
+  "+14257501028": "jbaer@zipwhip.com",
   "+14259222865": "acheslow@zipwhip.com",
+  "+14259225245": "icoletti@zipwhip.com",
+  "+15102197286": "abillings@zipwhip.com",
+  "+15146545077": "pwheeler@zipwhip.com",
+  "+16048139264": "cmitchell@zipwhip.com,",
+  "+16136002337": "RZiehl@zipwhip.com",
   "+17042310736": "agupta@zipwhip.com",
+  "+17197645258": "CMcMillin@zipwhip.com",
+  "+17197645258": "jgrajewski@zipwhip.com",
   "+17209381640": "rangadi@zipwhip.com",
   "+17347180067": "jlarson@zipwhip.com",
+  "+18253052378": "RZiehl@zipwhip.com",
   "+18312243884": "bbuchan@zipwhip.com",
   "+18329010083": "emartinez@zipwhip.com",
-  "+15146545077": "pwheeler@zipwhip.com",
-  "+12063838678": "mgomes@zipwhip",
-  "+16048139264": "cmitchell@zipwhip.com,",
-  "+15102197286": "abillings@zipwhip.com",
-  "+12069485760": "sroben@zipwhip.com",
-  "+12066013540": "Dwestra@zipwhip.com",
-  "+12062951888": "bmoore@zipwhip.com",
-  "+12065823768": "bmoore@zipwhip.com",
-  "+14259225245": "icoletti@zipwhip.com",
-  "+12068163975": "icoletti@zipwhip.com",
-  "+12064149445": "rfernandes@zipwhip.com",
-  "+12063099536": "rfernandes@zipwhip.com",
   "+18435138500": "dlavigne@zipwhip.com",
-  "+12068163523": "dlavigne@zipwhip.com",
+  "+18448982526": "acapps@zipwhip.com",
+  "+18729853152": "SBajaj@zipwhip.com",
 };
 
 // Customers list
@@ -100,6 +123,15 @@ const customers = [
     ],
   },
   {
+    customer_id: "3014",
+    display_name: "Alan Capps",
+    channels: [
+      { type: "sms", value: "+12068597896" },
+      { type: "sms", value: "+18448982526" },
+    ],
+    worker: "acapps@zipwhip.com",
+  },
+  {
     customer_id: "1000",
     display_name: "Alan Cheslow",
     channels: [
@@ -109,7 +141,7 @@ const customers = [
     worker: "acheslow@zipwhip.com",
   },
   {
-    customer_id: 1026,
+    customer_id: "1026",
     display_name: "Alison Billings",
     worker: "abillings@zipwhip.com",
     channels: [
@@ -151,7 +183,16 @@ const customers = [
     worker: "bbuchan@zipwhip.com",
   },
   {
-    customer_id: 1025,
+    customer_id: "3011",
+    display_name: "Cecilia Laitano",
+    channels: [
+      { type: "sms", value: "+12064809705" },
+      { type: "sms", value: "+12063099533" },
+    ],
+    worker: "claitano@zipwhip.com",
+  },
+  {
+    customer_id: "1025",
     display_name: "Chris Mitchell",
     worker: "cmitchell@zipwhip.com,",
     channels: [
@@ -160,7 +201,25 @@ const customers = [
     ],
   },
   {
-    customer_id: 1028,
+    customer_id: "3001",
+    display_name: "Corey McMillin",
+    channels: [
+      { type: "sms", value: "+12539511221" },
+      { type: "sms", value: "+17197645258" },
+    ],
+    worker: "cmcmillin@zipwhip.com",
+  },
+  {
+    customer_id: "3002",
+    display_name: "Dan Jeannotte",
+    channels: [
+      { type: "sms", value: "+12067650585" },
+      { type: "sms", value: "+12063099535" },
+    ],
+    worker: "djeannotte@zipwhip.com",
+  },
+  {
+    customer_id: "1028",
     display_name: "Dan Westra",
     worker: "Dwestra@zipwhip.com",
     channels: [
@@ -184,6 +243,15 @@ const customers = [
     worker: "dlavigne@zipwhip.com",
   },
   {
+    customer_id: "3003",
+    display_name: "David Li",
+    channels: [
+      { type: "sms", value: "+12069206418" },
+      { type: "sms", value: "+12068163962" },
+    ],
+    worker: "dli@zipwhip.com",
+  },
+  {
     customer_id: "1003",
     display_name: "Eduardo Martinez",
     channels: [
@@ -199,6 +267,15 @@ const customers = [
     worker: "fbanna@zipwhip.com",
   },
   {
+    customer_id: "3004",
+    display_name: "Flor Antara",
+    channels: [
+      { type: "sms", value: "+12068664904" },
+      { type: "sms", value: "+12063099510" },
+    ],
+    worker: "fantara@zipwhip.com",
+  },
+  {
     customer_id: "2005",
     display_name: "Ian Coletti",
     channels: [
@@ -208,6 +285,15 @@ const customers = [
     worker: "icoletti@zipwhip.com",
   },
   {
+    customer_id: "3005",
+    display_name: "Jake Grajewski",
+    channels: [
+      { type: "sms", value: "+12539511221" },
+      { type: "sms", value: "+17197645258" },
+    ],
+    worker: "jgrajewski@zipwhip.com",
+  },
+  {
     customer_id: "1005",
     display_name: "Jeff Parrish",
     channels: [
@@ -215,6 +301,21 @@ const customers = [
       { type: "sms", value: "+12068163671" },
     ],
     worker: "jparrish@zipwhip.com",
+  },
+  {
+    customer_id: "3006",
+    display_name: "Jennni Morts",
+    channels: [{ type: "sms", value: "+17197645258" }],
+    worker: "jmorts@zipwhip.com",
+  },
+  {
+    customer_id: "3007",
+    display_name: "Jeremy Baer",
+    channels: [
+      { type: "sms", value: "+14257501028" },
+      { type: "sms", value: "+12068163541" },
+    ],
+    worker: "jbaer@zipwhip.com",
   },
   {
     customer_id: "1006",
@@ -288,6 +389,12 @@ const customers = [
     worker: "khoutchens@zipwhip.com",
   },
   {
+    customer_id: "3008",
+    display_name: "Khalid Mohamud",
+    channels: [{ type: "sms", value: "+12062991304" }],
+    worker: "kmohamud@zipwhip.com",
+  },
+  {
     customer_id: 3,
     display_name: "Lani Chaffee",
     channels: [{ type: "sms", value: "+12063693826" }],
@@ -312,7 +419,7 @@ const customers = [
     worker: "mamsberry@zipwhip.com",
   },
   {
-    customer_id: 1024,
+    customer_id: "1024",
     display_name: "Matt Gomes",
     worker: "mgomes@zipwhip",
     channels: [
@@ -321,7 +428,13 @@ const customers = [
     ],
   },
   {
-    customer_id: 1023,
+    customer_id: "3009",
+    display_name: "Mohamed Kaboud",
+    channels: [{ type: "sms", value: "+12062991391" }],
+    worker: "mkaboud@zipwhip.com",
+  },
+  {
+    customer_id: "1023",
     display_name: "Paul Wheeler",
     worker: "pwheeler@zipwhip.com",
     channels: [
@@ -348,6 +461,21 @@ const customers = [
     worker: "rfernandes@zipwhip.com",
   },
   {
+    customer_id: "1020",
+    display_name: "Reilly Miller",
+    channels: [{ type: "sms", value: "+12062991349" }],
+    worker: "RMiller@zipwhip.com",
+  },
+  {
+    customer_id: "3012",
+    display_name: "Rob Ziehl",
+    channels: [
+      { type: "sms", value: "+16136002337" },
+      { type: "sms", value: "+18253052378" },
+    ],
+    worker: "rziehl@zipwhip.com",
+  },
+  {
     customer_id: "1016",
     display_name: "Ryan Gachet",
     channels: [{ type: "sms", value: "+12063099553" }],
@@ -363,7 +491,16 @@ const customers = [
     worker: "smehlhase@zipwhip.com",
   },
   {
-    customer_id: 1027,
+    customer_id: "3013",
+    display_name: "Sahib Bajaj",
+    channels: [
+      { type: "sms", value: "+18729853152" },
+      { type: "sms", value: "+12063099534" },
+    ],
+    worker: "sbajaj@zipwhip.com",
+  },
+  {
+    customer_id: "1027",
     display_name: "Sophie Roben",
     worker: "sroben@zipwhip.com",
     channels: [
@@ -385,12 +522,6 @@ const customers = [
       { type: "sms", value: "+12068163623" },
     ],
     worker: "tip@zipwhip.com",
-  },
-  {
-    customer_id: "1020",
-    display_name: "Reilly Miller",
-    channels: [{ type: "sms", value: "+12062991349" }],
-    worker: "RMiller@zipwhip.com",
   },
 ];
 
